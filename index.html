@@ -1,73 +1,183 @@
+Арсен Купи Арбуз, [22.01.2026 22:41]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Специальная кнопка</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFans Клон - Платформа для Контента</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff4081;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
             background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            touch-action: manipulation;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        #mainButton {
-            width: 80vw;
-            height: 80vw;
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .profile-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+        .profile-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .profile-card h3 {
+            margin: 10px 0;
+        }
+        .subscribe-btn {
+            background-color: #ff4081;
+            color: white;
             border: none;
-            background: url('image.jpg') center/cover no-repeat;
-            border-radius: 50%;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-
-        #mainButton:active {
-            transform: scale(0.95);
+        .subscribe-btn:hover {
+            background-color: #e91e63;
         }
-
-        @media (min-width: 768px) {
-            body {
-                background-color: red;
-                color: white;
-                font-family: Arial;
-                text-align: center;
-                padding: 20px;
-            }
-            #mainButton {
-                display: none;
-            }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .login-form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <button id="mainButton"></button>
-    <audio id="player" src="sound.mp3" preload="auto"></audio>
+
+    <header>
+        <h1>OnlyFans Клон</h1>
+        <p>Платформа для эксклюзивного контента от создателей</p>
+    </header>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#profiles">Профили</a>
+        <a href="#login">Вход</a>
+        <a href="#signup">Регистрация</a>
+    </nav>
+
+    <div class="container" id="home">
+        <h2>Добро пожаловать!</h2>
+        <p>Подписывайтесь на любимых создателей и получайте доступ к эксклюзивному контенту. Создавайте свой профиль и зарабатывайте на своем творчестве.</p>
+    </div>
+
+    <div class="container" id="profiles">
+        <h2>Популярные Профили</h2>
+        <div class="profile-grid">
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/250x200?text=Creator+1" alt="Creator 1">
+                <h3>Creator 1</h3>
+                <p>Эксклюзивные фото и видео</p>
+                <p>Подписка: $9.99/мес</p>
+                <button class="subscribe-btn" onclick="alert('Подписка оформлена!')">Подписаться</button>
+            </div>
+            <div class="profile-card">
+
+Арсен Купи Арбуз, [22.01.2026 22:41]
+<img src="https://via.placeholder.com/250x200?text=Creator+2" alt="Creator 2">
+                <h3>Creator 2</h3>
+                <p>Живые трансляции и чаты</p>
+                <p>Подписка: $14.99/мес</p>
+                <button class="subscribe-btn" onclick="alert('Подписка оформлена!')">Подписаться</button>
+            </div>
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/250x200?text=Creator+3" alt="Creator 3">
+                <h3>Creator 3</h3>
+                <p>Персонализированный контент</p>
+                <p>Подписка: $19.99/мес</p>
+                <button class="subscribe-btn" onclick="alert('Подписка оформлена!')">Подписаться</button>
+            </div>
+            <!-- Добавьте больше карточек по необходимости -->
+        </div>
+    </div>
+
+    <div class="container" id="login">
+        <h2>Вход в Аккаунт</h2>
+        <form class="login-form">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit" onclick="alert('Вход выполнен!')">Войти</button>
+        </form>
+    </div>
+
+    <div class="container" id="signup">
+        <h2>Регистрация</h2>
+        <form class="login-form">
+            <input type="text" placeholder="Имя пользователя" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit" onclick="alert('Регистрация завершена!')">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 OnlyFans Клон. Все права защищены.</p>
+    </footer>
 
     <script>
-        const button = document.getElementById('mainButton');
-        const audio = document.getElementById('player');
-
-        button.addEventListener('click', function() {
-            // Воспроизводим аудио
-            audio.play();
-            
-            // Скрываем кнопку
-            this.style.display = 'none';
-            
-            // Отключаем повторные нажатия
-            this.removeEventListener('click', arguments.callee);
-        });
-
-        // Блокируем контекстное меню на телефонах
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        });
+        // Простой JS для имитации функционала (в реальности нужен backend)
+        console.log('Сайт загружен');
     </script>
+
 </body>
 </html>
